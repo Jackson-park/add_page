@@ -530,11 +530,9 @@ class Register extends React.Component{
                 </Grid>
               </form>
             </div>
-            <Box mt={5}>
-            <Copyright/>
-            </Box>
+            <br />
+            <br />
           </Container>
-
           </React.Fragment>
         )
     }

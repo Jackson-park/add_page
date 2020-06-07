@@ -226,17 +226,14 @@ class Login extends React.Component{
                         </Grid>
                         <Grid item>
                         <Link href="#" variant="body2">
-                             비밀번호 찾기
+                            비밀번호 찾기
                         </Link>
                         </Grid>
                     </Grid>
                     </form>
+                    <br />
                 </div>
-                <Box mt={8}>
-                    <Copyright />
-                </Box>
                 </Container>
-
         </React.Fragment>
         )
     }

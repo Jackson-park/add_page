@@ -171,7 +171,6 @@ class Traveler extends React.Component{
     <Listcard></Listcard>
     <Listcard></Listcard>
     <Listcard></Listcard>
-    <Listcard></Listcard>
     </Grid>
     </div>
     </Container>

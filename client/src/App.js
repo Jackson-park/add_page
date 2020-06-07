@@ -1,16 +1,25 @@
 import React from 'react';
 import './index.css';
 import {BrowserRouter as Router, Route, Switch } from "react-router-dom";
+//푸터
 import Footer from './components/view/Footer.js';
+//상단 메인 앱바
 import LinkAppBar from './components/Appbar/LinkAppbar.js';
+//메인화면
 import Home from './components/view/Home.js';
+//마이페이지
 import Mypage from "./components/mypage/Mypage.js";
-import Paymentdetails from "./components/Paymentdetails.js";
+//결제내역 페이지
+import Paymentdetails from "./components/Paymentdetail/Paymentdetails.js";
+//상품상세 페이지
 import Detail from "./components/productDetail/Detail.js";
+//여행자등록 페이지
 import Traveler from "./components/trip/Traveler.js";
+//여행자 리스트 페이지
 import Travelerlist from "./components/trip/Travelerlist.js";
+//여행자 상세 페이지
 import Travelerdetail from "./components/trip/Travelerdetail.js";
-
+//상품등록 페이지
 import ProductAdd from './components/Product_add_page/ProductAdd';
 
 //상품 목록 페이지
@@ -32,6 +41,8 @@ import ServiceCenter from './components/Service center/ServiceCenter'
 import QuestionAdd from './components/QuestionAdd/QuestionAdd'
 //정산현황
 import Settlement from './components/Settlement/Settlement.js'
+//이용약관
+import Terms from './components/Terms_of_Use/Terms.js';
 export default class App extends React.Component {
 
   render() {
@@ -55,6 +66,7 @@ export default class App extends React.Component {
             <Route exact path='/servicecenter' component={ServiceCenter}/>
             <Route exact path='/quetionadd' component={QuestionAdd}/>
             <Route exact path='/settlement' component={Settlement}/>
+            <Route exact path='/Terms' component={Terms}/>
           </Switch>
           <Footer />
         </div>
