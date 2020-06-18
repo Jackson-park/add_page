@@ -43,6 +43,9 @@ import QuestionAdd from './components/QuestionAdd/QuestionAdd'
 import Settlement from './components/Settlement/Settlement.js'
 //이용약관
 import Terms from './components/Terms_of_Use/Terms.js';
+//개인정보처리방침
+import Privacy_Policy from './components/Terms_of_Use/Privacy_Policy.js';
+
 export default class App extends React.Component {
 
   render() {
@@ -67,6 +70,7 @@ export default class App extends React.Component {
             <Route exact path='/quetionadd' component={QuestionAdd}/>
             <Route exact path='/settlement' component={Settlement}/>
             <Route exact path='/Terms' component={Terms}/>
+            <Route exact path='/policy/privacy' component={Privacy_Policy}/>
           </Switch>
           <Footer />
         </div>

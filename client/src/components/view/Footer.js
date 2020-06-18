@@ -39,9 +39,7 @@ class Footer extends React.Component{
 						<ButtonGroup className={classes.btn_btngroup}
 						width="50%" variant="text" color="inherit">
 							<Button href="/Terms" component="a">이용약관</Button>
-							<Button href="" component="a">개인정보취급방침</Button>
-							<Button href="" component="a">운영정책</Button>
-							<Button href="" component="a">이용방법</Button>
+							<Button href="/policy/privacy" component="a">개인정보처리방침</Button>
 							<Button href="" component="a">공지사항</Button>
 							<Button href="/faq" component="a">FAQ/고객센터</Button>
 							</ButtonGroup>

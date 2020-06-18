@@ -5,15 +5,12 @@ import Avatar from '@material-ui/core/Avatar';
 import Button from '@material-ui/core/Button';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import TextField from '@material-ui/core/TextField';
-import FormControlLabel from '@material-ui/core/FormControlLabel';
-import Checkbox from '@material-ui/core/Checkbox';
 import Link from '@material-ui/core/Link';
 import Grid from '@material-ui/core/Grid';
-import Box from '@material-ui/core/Box';
+
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Typography from '@material-ui/core/Typography';
 import Container from '@material-ui/core/Container';
-import {AppBar,Toolbar} from '@material-ui/core';
 import axios from 'axios';
 
 
@@ -35,31 +32,16 @@ const styles = theme =>({
       Button_submit:{
         width:"100%",
         height:60,
-        backgroundColor:"#ADC7E4",
+        backgroundColor:"#F3E2A9",
         borderRadius:10,
         margin: theme.spacing(3, 0, 2),
         '&:hover': {
             color:"#ffffff",
-            backgroundColor:"#000000",
+            backgroundColor:"#FFBF00",
           },
       }
 
 })
-
-
-
-function Copyright() {
-    return (
-      <Typography variant="body2" color="textSecondary" align="center">
-        {'Copyright © '}
-        <Link color="inherit" href="https://material-ui.com/">
-          사다드림
-        </Link>{' '}
-        {new Date().getFullYear()}
-        {'.'}
-      </Typography>
-    );
-  }
 
 class Login extends React.Component{
     constructor(props){
@@ -88,7 +70,7 @@ class Login extends React.Component{
             
         // }
 
-         
+
         // 아이디 기억하기
         // componentDidMount(){
         //     if (localStorage.checkbox ==="lsRememberMe") {
@@ -111,6 +93,12 @@ class Login extends React.Component{
         })
     }
 
+    handleFormLogout = async (e) => {
+        e.preventDefault();
+        this
+        .onLogoutClick();
+    }
+
     onLogoutClick = (e) => {
         const url = 'users/logout';
 
@@ -122,12 +110,6 @@ class Login extends React.Component{
             console.log(error);
         })
         
-    }
-
-    handleFormLogout = async (e) => {
-        e.preventDefault();
-        this
-        .onLogoutClick();
     }
 
     onLoginClick = (e) => {
@@ -142,6 +124,7 @@ class Login extends React.Component{
             // 로그인 버튼 클릭시 리턴 메시지에 따른 로직 구현
             if(response.data.result == "ok") {
                 window.alert(response.data.message);
+                window.location.href="/";
             } else if(response.data.result == "fail") {
                 window.alert(response.data.message);
             } else {
@@ -170,17 +153,16 @@ class Login extends React.Component{
 
         return(
         <React.Fragment>
+            <CssBaseline />
                 <Container component="main" maxWidth="xs">
-                <CssBaseline />
                 <div className={classes.paper}>
                     <Avatar className={classes.avatar}>
                     <LockOutlinedIcon />
                     </Avatar>
-                    <Typography component="h1" variant="h5">
+                    <Typography variant="h5">
                     로그인
                     </Typography>
                     <form className={classes.form} noValidate>
-                    
                     <TextField
                         variant="outlined"
                         margin="normal"
@@ -212,20 +194,20 @@ class Login extends React.Component{
                             type="submit"
                             value="Login"
                             onClick={this.handleFormSubmit} >로그인</Button>
-
+{/*
                     <Button className={classes.Button_submit}
                                                 type="submit"
                                                 value="Login"
                                                 onClick={this.handleFormLogout} >로그아웃</Button>
-
+                                                 */}
                     <Grid container>
                         <Grid item xs>
-                        <Link href="/register" variant="body2">
+                        <Link href="/register" variant="body1">
                             회원가입
                         </Link>
                         </Grid>
                         <Grid item>
-                        <Link href="#" variant="body2">
+                        <Link href="#" variant="body1">
                             비밀번호 찾기
                         </Link>
                         </Grid>
@@ -237,6 +219,5 @@ class Login extends React.Component{
         </React.Fragment>
         )
     }
-
 }
 export default withStyles(styles)(Login);

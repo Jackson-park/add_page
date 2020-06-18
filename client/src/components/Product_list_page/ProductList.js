@@ -38,33 +38,15 @@ import UK from "./Country_flag/u-k.png"
 import VN from "./Country_flag/v-n.png"
 import all from "./Country_flag/earth-sm.png"
 
-
-
 //더보기 이미지
 import more_icon from "./icon/more-icon.png"
 
-// rendering of copyright
-function Copyright() {
-    return (
-      <Typography variant="body2" color="textSecondary" align="center">
-        {'Copyright © '}
-        <Link color="inherit" href="https://material-ui.com/">
-          사다드림
-        </Link>{' '}
-        {new Date().getFullYear()}
-        {'.'}
-      </Typography>
-    );
-  }
   const styles = theme => ({
 
 
     div_app: {
-      width:1200,
+      width: '100%',
       flexDirection: 'column',
-      
-     
-     
   
     },
     div_more_icon:{
@@ -87,7 +69,7 @@ function Copyright() {
       border: "1px solid",
       marginTop: 1,
       marginBottom:20,
-      width:1200,
+      width: '100%',
     },
     Grid_navigator: {
       width: 180,
@@ -95,7 +77,7 @@ function Copyright() {
     },
     Grid_content: {
       marginLeft: 200,
-      width:1200, //컨텐츠 그리드 길이
+      width: '100%', //컨텐츠 그리드 길이
       position: 'absolute' //화면확대 해도 고정시키는 기능 !!
     },
     Grid_header:{
@@ -107,7 +89,6 @@ function Copyright() {
       height: 30,
       marginTop:10,
       
-     
       '&:hover': {
         color:"#6495ED"
       },
@@ -208,7 +189,7 @@ class ProductList extends React.Component {
           more_icon:'none',
           more_icon2:'',
           more_icon3:'none',
-          more_cion4:''
+          more_icon4:''
         }
       }
 
@@ -257,14 +238,13 @@ class ProductList extends React.Component {
     ));
 
     return(
+      <React.Fragment>
+      <CssBaseline />
         <Container className={classes.Container} component="main" >
-         
-            <CssBaseline />
-   
+
         <div className={classes.div_app}>
       
           {/* 위치: 중앙 */}
-          
 
             {/*헤더 */}
             <Grid  container
@@ -273,14 +253,13 @@ class ProductList extends React.Component {
               justify="flex-start"
               alignItems="flex-end">
 
-                  <Link className={classes.Link_product_list} href="productlist" onClick={this.preventDefault}>
+                  <Link className={classes.Link_product_list} href="/product/list">
                     {"상품 목록"}
                   </Link>
 
-                  <Link className={classes.Link_product_add} href="productadd" onClick={this.preventDefault}>
+                  <Link className={classes.Link_product_add} href="/product/add">
                     {"상품 추가하기"}
                   </Link>
-           
            {/* 검색창 */}
            <div className={classes.div_search}>     
             <Box  borderRadius={16} className={classes.search}>
@@ -301,8 +280,6 @@ class ProductList extends React.Component {
             </div>  
             </Grid>
       
-
-
             <Divider className={classes.header_Divider}/>
 
             <Grid container direction="row" justify="flex-start" alignItems="baseline">
@@ -315,10 +292,9 @@ class ProductList extends React.Component {
                   component="nav"
                   aria-labelledby="nested-list-subheader"
                   subheader={
-                    <ListSubheader className={classes.ListSubheader_category} component="div"
-                                   id="nested-list-subheader">
+                    <ListSubheader className={classes.ListSubheader_category} component="div" id="nested-list-subheader">
                       카테고리
-                    </ListSubheader>}
+                      </ListSubheader>}
                   className={classes.root}>
 
                   <ListItem button className={classes.ListItemText_Category}>
@@ -456,16 +432,12 @@ class ProductList extends React.Component {
               className="grid" > 
                 <Link  variant="h5" href="#">1</Link>
               <Divider></Divider>
-             </Grid>
-             
-                {/* footer */}
-              <footer className="footer" >
-                <Copyright />
-              </footer>
+              </Grid>
             </Grid>
           </Grid>
         </div>
       </Container>
+      </React.Fragment>
     )
 
 }
