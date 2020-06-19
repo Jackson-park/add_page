@@ -65,7 +65,7 @@ class LinkAppbar extends React.Component {
   handle_Popup(){
     var url = "/login"
     var name = "popup test";
-    var option = "width = 400, height = 600, top = 100, left = 200, location = no"
+    var option = "width = 400, height = 600, top = 100, left = 100, location = no"
     window.open(url, name, option);
   }
   handleFormLogout = async (e) => {
@@ -80,6 +80,7 @@ class LinkAppbar extends React.Component {
         
     }).then(function(response) {
         console.log(response);
+        //로그아웃 구현
         if(response.data.result == "ok") {
           window.alert(response.data.message);
         }
@@ -87,6 +88,8 @@ class LinkAppbar extends React.Component {
     }).catch(function(error) {
         console.log(error);
     })
+    this.setState({ anchorEl: null});
+    this.setState({ open: false});
 }
 
   render() {
