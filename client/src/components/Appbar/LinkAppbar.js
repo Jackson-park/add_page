@@ -83,6 +83,7 @@ class LinkAppbar extends React.Component {
         //로그아웃 구현
         if(response.data.result == "ok") {
           window.alert(response.data.message);
+          window.location.href="/";
         }
         // 로그인이 안된 상태에서는 fail 처리 필요
     }).catch(function(error) {
