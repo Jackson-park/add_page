@@ -8,7 +8,7 @@ import DialogActions from '@material-ui/core/DialogActions';
 import DialogContent from '@material-ui/core/DialogContent';
 import DialogTitle from '@material-ui/core/DialogTitle';
 import MenuItem from '@material-ui/core/MenuItem';
-
+import TripImg from './trip.jpg';
 import Listcard from './Listcard.js';
 import SearchIcon from '@material-ui/icons/Search';
 const styles = theme =>({
@@ -89,7 +89,7 @@ class Traveler extends React.Component{
 		<CssBaseline />
     {/* 위 배경이미지 */}
     <div className={classes.div_root}>
-    <img src={null} className={classes.img_main}></img>
+    <img src={TripImg} className={classes.img_main}></img>
     </div>
     <Container fixed className={classes.Container_root}>
       {/* 국가 지역,나라 검색버튼 */}

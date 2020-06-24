@@ -6,8 +6,7 @@ import {CssBaseline, Container, Typography, Grid, Button,
   NativeSelect,InputBase,TextareaAutosize, FormControl,
   FormControlLabel,RadioGroup, Radio, Divider } from '@material-ui/core';
 import FlightTakeoffIcon from '@material-ui/icons/FlightTakeoff';
-
-
+import TripImg from './trip.jpg';
 import Roundtrip from './Roundtrip.js';
 import Oneway from './Oneway.js';
 const styles = theme =>({
@@ -114,12 +113,14 @@ class Traveler extends React.Component{
   }
   handleChange_money(e) {
     this.setState({ money: e.target.value });
+  {/* 가격 제한
     if (this.state.money < 1000) {
-     window.alert('가격은 1,000원 이상부터 가능합니다.');
+      window.alert('가격은 1,000원 이상부터 가능합니다.');
     };
     if (this.state.money > 600000) {
       window.alert('가격은 60만원 이하만 가능합니다.');
     };
+    */}
   }
   render() {
     const {classes}= this.props;
@@ -128,7 +129,7 @@ class Traveler extends React.Component{
 		<CssBaseline />
     {/* 위 배경이미지 */}
     <div className={classes.div_root}>
-    <img src={null} className={classes.img_main}></img>
+    <img src={TripImg} className={classes.img_main}></img>
     </div>
     <Container>
     <div className={classes.div_traveler}>

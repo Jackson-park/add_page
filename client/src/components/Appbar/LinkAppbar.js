@@ -63,7 +63,7 @@ class LinkAppbar extends React.Component {
   }
 
   handle_Popup(){
-    var url = "/login"
+    var url = "/Talk"
     var name = "popup test";
     var option = "width = 400, height = 600, top = 100, left = 100, location = no"
     window.open(url, name, option);
@@ -71,7 +71,6 @@ class LinkAppbar extends React.Component {
   handleFormLogout = async (e) => {
     e.preventDefault();
     this.onLogoutClick();
-    
 }
   onLogoutClick = (e) => {
     const url = 'users/logout';
@@ -95,7 +94,7 @@ class LinkAppbar extends React.Component {
 
   render() {
     const {classes} = this.props;
-    const url = 'users/logout';
+    
     return(
       <React.Fragment>
       <CssBaseline />

@@ -7,7 +7,7 @@ import {CssBaseline, Container, Typography, Grid, Button,
   FormControlLabel, Grow, Divider, Chip, Avatar } from '@material-ui/core';
 import FlightTakeoffIcon from '@material-ui/icons/FlightTakeoff';
 import CheckBoxIcon from '@material-ui/icons/CheckBox';
-
+import TripImg from './trip.jpg';
 import AccountCircle from '@material-ui/icons/AccountCircle';
 const styles = theme =>({
 	div_root: {
@@ -21,7 +21,7 @@ const styles = theme =>({
 	width: '80%',
   },
   img_user: {
-	  width: '40%'
+    width: '40%'
   },
   div_body: {
     flex: 1,
@@ -32,11 +32,11 @@ const styles = theme =>({
     width: theme.spacing(60),
   },
   div_info: {
-	  width: theme.spacing(60),
+    width: theme.spacing(60),
   },
   divider: {
     flex: 1,
-	  margin: theme.spacing(2, 0),
+    margin: theme.spacing(2, 0),
 	},
   div_price_limit: {
     flex: 1,
@@ -125,7 +125,7 @@ class Travelerdetail extends React.Component{
 		<CssBaseline />
     {/* 위 배경이미지 */}
     <div className={classes.div_root}>
-    <img src={null} className={classes.img_main}></img>
+    <img src={TripImg} className={classes.img_main}></img>
     </div>
     <Container fixed className={classes.Container}>
 {/* 01정보입력 */}
@@ -249,36 +249,30 @@ class Travelerdetail extends React.Component{
     </div>
 				<Divider className={classes.divider} />
         {/* 질문과 답글 */}
-        <Container fixed>
         <div>
           <Typography variant="h5">답변해드림</Typography>
           <br />
           <Grid
             container
             direction="row"
-            justify="flex-start"
+            justify="space-between"
             alignItems="center">
-            <Grid item><Avatar alt="박재성" src={null} className={classes.Avatar}></Avatar></Grid>
-            &nbsp;&nbsp;<Grid item>
+            <Avatar alt={this.state.user} src={null} className={classes.Avatar}></Avatar>
               <TextField className={classes.TextField_q}
               id="input-with-icon-grid"
               name="question"
               label="질문을 입력하세요.."
               value={this.state.question}
-              onChange={this.handleChange}
-               />
-              </Grid>
-            &nbsp;&nbsp;<Grid item>
-              <Button variant="contained" color="primary">확인</Button>
-              </Grid>
-        </Grid>
-        <Divider className={classes.divider} />
-        <div>
-
-        </div>
-          </div>
-          </Container>
-          </Container>
+              onChange={this.handleChange}/>
+                <Button variant="contained" color="primary">확인</Button>
+                </Grid>
+                <Divider className={classes.divider} />
+                </div>
+                {/* 댓글 */}
+                <div>
+                  
+                </div>
+                </Container>
           <br /><br />
           </div>
     );

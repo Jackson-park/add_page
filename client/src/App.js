@@ -45,11 +45,13 @@ import Settlement from './components/Settlement/Settlement.js'
 import Terms from './components/Terms_of_Use/Terms.js';
 //개인정보처리방침
 import Privacy_Policy from './components/Terms_of_Use/Privacy_Policy.js';
+//1:1대화하기
+import Talk from './components/Talk/Talk.js';
 
 export default class App extends React.Component {
 
   render() {
-    return (  
+    return (
       <Router>
         <div>
           <LinkAppBar />
@@ -71,6 +73,7 @@ export default class App extends React.Component {
             <Route exact path='/settlement' component={Settlement}/>
             <Route exact path='/Terms' component={Terms}/>
             <Route exact path='/policy/privacy' component={Privacy_Policy}/>
+            <Route exact path='/Talk' component={Talk}/>
           </Switch>
           <Footer />
         </div>
@@ -78,5 +81,3 @@ export default class App extends React.Component {
     );
   }
 }
-
-

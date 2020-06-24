@@ -5,7 +5,7 @@ import CardActionArea from '@material-ui/core/CardActionArea';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Typography from '@material-ui/core/Typography';
-
+import south_Korea from './south_korea.jpg';
 import { Avatar } from '@material-ui/core';
 
 import FlightIcon from '@material-ui/icons/Flight';
@@ -50,7 +50,7 @@ class Listcard extends React.Component{
   constructor(props) {
     super(props)
     this.state={
-      Country_Media: null,
+      Country_Media: south_Korea,
       traveler: '박재성',
       start_country: '필리핀',
       end_country: '한국',

@@ -53,30 +53,11 @@ const styles = theme =>({
       styledTablecell_question_name:{
         width:600,
         height:50,
-       
       }
-
-
-
-     
-      
 
 })
 
 
-
-function Copyright() {
-    return (
-      <Typography variant="body2" color="textSecondary" align="center">
-        {'Copyright © '}
-        <Link color="inherit" href="https://material-ui.com/">
-          사다드림
-        </Link>{' '}
-        {new Date().getFullYear()}
-        {'.'}
-      </Typography>
-    );
-  }
 
   function createData(Question_name, Now_state, Date) {
     return { Question_name, Now_state, Date };
@@ -89,15 +70,8 @@ class ServiceCenter extends React.Component{
         super(props)
         this.state={
 
-           
         }
     }
-  
-    
-
-
-
-
 
     handlevalueChange = (e) => {
         let nextState = {};
@@ -203,18 +177,9 @@ class ServiceCenter extends React.Component{
                       </TableBody>
                     </Table>
                   </TableContainer>
-
-
-
-
-                    
-                    </form>
+                  </form>
                 </div>
-                <Box mt={8}>
-                    <Copyright />
-                </Box>
                 </Container>
-
         </React.Fragment>
         )
     }
