@@ -1,5 +1,5 @@
 import React from 'react';
-import { CardMedia, CardActionArea, Card, TextField, Button, Paper, Select, Typography, Grid, Divider, Hidden,} from '@material-ui/core';
+import { CardMedia, CardActionArea, Card, CardContent, TextField, Button, Paper, Select, Typography, Grid, Divider, Hidden, Link} from '@material-ui/core';
 import { withStyles } from '@material-ui/core/styles';
 import cookie from './cookie.jpg'
 import './card.css';
@@ -7,83 +7,41 @@ import './card.css';
 const styles = theme =>({
 
     Card_Content:{
-        width:500,
-        height:200,
-        marginLeft:5,
-        marginTop:20
+        width: "80%",
+        height:"auto",
+        margin: theme.spacing(3),
       },
       Grid_cardmedia:{
         width:250,
         height:230
       },
-      CardMedia_photo:{
-        height:230,
+      div_img: {
+        width: theme.spacing(30),
       },
-      Typography_request_country:{
-        fontSize:13
+      img_img: {
+        width: "100%",
       },
-      Typography_product_name:{
-        fontSize:25,
-        paddingBottom:5
-      },
-      Typography_product_explain:{
-        fontSize:20,
-        paddingBottom:10
-    
-      },
-      Typography_product_cost:{
-        fontSize:25
-      },
-      Typography_after_time:{
-        fontSize:15,
-        paddingTop:15
-      },
-      Grid_content_product:{
-        width:250
-      },
-
-
-
 })
 
 class ProductCard extends React.Component {
 
   render() {
     const {classes} = this.props;
-    
-    //이미지 크기 조정
-    const img_scale={
-      overflow:Hidden,
-      width:230,
-      height:190,
-      padding:5
-    }
 
     return (
       <div>
         {/* 컨텐츠(상품카드) */}
-        <Card className={classes.Card_Content}>
-          <Grid container direction="row" justify="flex-start" alignItems="flex-start">
+        <Card>
+        <Link href="/detail" underline="none" color="inherit">
             {/* 이미지 그리드 */}
-            <Grid className={classes.Grid_cardmedia}>
               <CardActionArea>
-                <div style={img_scale}>
+                <div className={classes.div_img}>
                   <div class="scale">
-                  <img style={img_scale} src={cookie}/>
+                  <img class="scale" className={classes.img_img} src={cookie}/>
                   </div>
-
-                </div>
-              </CardActionArea>
-            </Grid>
-
-            {/* 내용 그리드 */}
-            <Grid
-              className={classes.Grid_content_product}
-              container2
-              direction="row"
-              justify="flex-start"
-              alignItems="flex-start">
-              <CardActionArea>
+                  </div>
+                  {/* 내용 그리드 */}
+              <CardContent>
                 <Typography className={classes.Typography_request_country}>{this.props.request_from}</Typography>
                 <Typography className={classes.Typography_request_country}>{this.props.request_to}</Typography>
                 <Divider></Divider>
@@ -91,9 +49,9 @@ class ProductCard extends React.Component {
                 <Typography className={classes.Typography_product_explain}>{this.props.product_discription}</Typography>
                 <Typography className={classes.Typography_product_cost}>&#8361; {this.props.product_price}원</Typography>
                 <Typography className={classes.Typography_after_time}>{this.props.product_time_of_enroll}</Typography>
+              </CardContent>
               </CardActionArea>
-            </Grid>
-          </Grid>
+              </Link>
         </Card>
       </div>
     )

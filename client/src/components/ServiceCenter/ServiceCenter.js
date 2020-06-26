@@ -137,8 +137,9 @@ class ServiceCenter extends React.Component{
                       alignItems="flex-end"
                     >
                       <Typography className={classes.Typography_header} variant="h5">문의 리스트</Typography>
-                     <Button variant="text"> <Link><Typography variant="h6">문의 작성하기</Typography></Link></Button>
-                   
+                        <Link href="/servicecenter/questionadd">
+                          <Typography variant="h6">문의 작성하기</Typography>
+                        </Link>
                     </Grid>
 
                       <Divider className={classes.Divider_header}/>

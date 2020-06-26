@@ -19,45 +19,45 @@ const styles = theme =>({
 		flex: 1,
 		backgroundColor: theme.palette.grey[200],
 		padding: theme.spacing(10),
-		fontFamily: "Jalnan",
-	  },
+    fontFamily: "Jalnan",
+  },
   Paper_image: {
 		width: '95%',
 		height: 600,
 		padding: theme.spacing(3),
-		textAlign: 'center',
-	  },
+    textAlign: 'center',
+  },
 	Paper_info: {
 		width: '100%',
 		height: 'auto',
 		padding: theme.spacing(3),
-		textAlign: 'center',
-	  },
+    textAlign: 'center',
+  },
 	Paper_ask: {
 		width: '95%',
 		height: 'auto',
 		minHeight: theme.spacing(50),
-		padding: theme.spacing(3),
-	  },
+    padding: theme.spacing(3),
+  },
 	Paper_ing: {
 		width: '100%',
 		height: 'auto',
 		padding: theme.spacing(3),
-	  },
+	},
 	Button_button: {
 		width: 'auto',
 		height: 'auto',
 		margin: theme.spacing(2),
     fontFamily: "Jalnan",
-	  },
+	},
 	div_support: {
     width: '100%',
     minHeight: theme.spacing(20),
-	  },
+	},
 	div_matching: {
     width: '100%',
     minHeight: theme.spacing(20),
-	  },
+  },
 	divider: {
       margin: theme.spacing(3, 0),
       },
@@ -97,11 +97,10 @@ class Detail extends React.Component {
 			<React.Fragment>
         <CssBaseline />
 		<Paper className={classes.Paper_root}>
-			
 			<Container fixed>
         <div>
         <Breadcrumbs separator={<NavigateNextIcon fontSize="small" />} aria-label="breadcrumb">
-        <Link color="textPrimary" href="/">1:1구매요청리스트</Link>
+        <Link color="textPrimary" href="/product/list">1:1구매요청리스트</Link>
         <Link color="textPrimary" href="/Detail">제품상세보기</Link>
       </Breadcrumbs>
       </div>
@@ -120,13 +119,13 @@ class Detail extends React.Component {
             <Typography variant="h5"><Link href="/Mypage" component="a">{this.state.user}</Link>님이 요청드림</Typography>
             </div>
             <hr className={classes.hr_hr}></hr>
-       <TableContainer>
+            <TableContainer>
       <Table>
       <TableRow>
             <TableCell>요청물품</TableCell>
             <TableCell>{this.state.name}</TableCell>
           </TableRow>
-           <TableRow>
+          <TableRow>
             <TableCell>요청국가</TableCell>
             <TableCell>{this.state.request_country}</TableCell>
           </TableRow>
@@ -165,8 +164,8 @@ class Detail extends React.Component {
       </Table>
     </TableContainer>
     <Button className={classes.Button_button} variant="contained" color="primary">
-        지원하기
-        </Button>
+      지원하기
+    </Button>
       <Button className={classes.Button_button} variant="contained" color="secondary">
         1:1대화하기
       </Button>
@@ -178,10 +177,10 @@ class Detail extends React.Component {
         <Grid  item xs={12} sm={6}>
           <Paper className={classes.Paper_ask}>
               <Typography variant="h5">
-               답변해드림
-              </Typography>
-              <hr className={classes.hr_hr}></hr>
-              <Typography variant="h6">주의사항</Typography>
+                답변해드림
+                </Typography>
+            <hr className={classes.hr_hr}></hr>
+            <Typography variant="h6">주의사항</Typography>
             <div>
             <Typography variant="subtitle1">
               - 사다드림의 안전 거래 에스크로 거래 시스템을 이용해주세요!
@@ -193,32 +192,24 @@ class Detail extends React.Component {
               - 외부거래 유도 문구 및 비속어 및 비방글은 경고와 함께 삭제될 수 있습니다.
               </Typography>
             </div>
+            <TextField
+            placeholder="질문을 입력하세요."
+            fullWidth
+            margin="normal"
+            InputLabelProps={{
+            shrink: true,
+            }}
+            variant="outlined">
+            </TextField>
 
-             <TextField
-             placeholder="질문을 입력하세요."
-             fullWidth
-             margin="normal"
-             InputLabelProps={{
-               shrink: true,
-             }}
-             variant="outlined">
-             </TextField>
-             
-            <Button
-            variant="contained"
-            color="primary"
-            fullWidth>
-              입력완료
-            </Button>
+            <Button variant="contained" color="primary" fullWidth>입력완료</Button>
             <Divider className={classes.divider} />
           </Paper>
         </Grid>
         <Grid item xs={12} sm={6}>
           <Paper className={classes.Paper_ing}>
             <div className={classes.div_support}>
-            <Typography variant="h5">
-               지원현황
-              </Typography>
+            <Typography variant="h5">지원현황</Typography>
               <hr className={classes.hr_hr}></hr>
               <Paper>
                 <Typography variant="h6">지원한 여행자가 없습니다.</Typography>
@@ -226,9 +217,7 @@ class Detail extends React.Component {
               </div>
               <Divider className={classes.divider} />
               <div className={classes.div_matching}>
-              <Typography variant="h5">
-               매칭현황
-              </Typography>
+              <Typography variant="h5">매칭현황</Typography>
               <hr className={classes.hr_hr}></hr>
               <Paper>
               <Typography variant="h6">매칭 중인 여행자가 없습니다.</Typography>

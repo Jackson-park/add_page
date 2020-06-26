@@ -78,11 +78,13 @@ render() {
 				primary={<b>{this.state.user}</b>}
 				secondary={
 				<React.Fragment>
-					<Typography
+					<Grid container wrap="nowrap">
+					<Typography noWrap
 					component="span"
 					variant="body2"
 					className={classes.inline}
-					color="textPrimary">누구인가?</Typography>
+					color="textPrimary">누구인가?sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss</Typography>
+					</Grid>
 				</React.Fragment>}/>
 				</ListItem>
 		<Divider variant="fullWidth" component="li" />
@@ -94,11 +96,13 @@ render() {
 					primary={<b>이동욱</b>}
 					secondary={
 					<React.Fragment>
-						<Typography
+						<Grid container wrap="nowrap">
+						<Typography noWrap
 						component="span"
 						variant="body2"
 						className={classes.inline}
-						color="textPrimary">어디서봐?</Typography>
+						color="textPrimary">어디서봐?dddddddddddddddddddddddddddddddddddddddddddddddddddd</Typography>
+						</Grid>
 						</React.Fragment>}/>
 						</ListItem>
 		<Divider variant="fullWidth" component="li" />
@@ -110,11 +114,13 @@ render() {
 					primary={<b>김환승</b>}
 					secondary={
 					<React.Fragment>
-						<Typography
+						<Grid container wrap="nowrap">
+						<Typography noWrap
 						component="span"
 						variant="body2"
 						className={classes.inline}
 						color="textPrimary">ㅁㄴㅇㅁㄴㅇㄻㅇㄴㄹfffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff</Typography>
+						</Grid>
 					</React.Fragment>}/>
 					</ListItem>
 					<Divider variant="fullWidth" component="li" />
@@ -126,11 +132,13 @@ render() {
 					primary={<b>이지윤</b>}
 					secondary={
 					<React.Fragment>
-						<Typography
+						<Grid container wrap="nowrap">
+						<Typography noWrap
 						component="span"
 						variant="body2"
 						className={classes.inline}
-						color="textPrimary">지윤지윤</Typography>
+						color="textPrimary">지윤지윤ffffffffffffffffffffffffffffffffffffffffffffffffffffff</Typography>
+						</Grid>
 					</React.Fragment>}/>
 					</ListItem>
 					<Divider variant="fullWidth" component="li" />
@@ -142,11 +150,13 @@ render() {
 					primary={<b>보라돌이</b>}
 					secondary={
 					<React.Fragment>
-						<Typography
+						<Grid container wrap="nowrap">
+						<Typography noWrap
 						component="span"
 						variant="body2"
 						className={classes.inline}
-						color="textPrimary">보라돌이 안녕!</Typography>
+						color="textPrimary">보라돌이 안녕!gggggggggggggggggggggggggggggggggggggggggggggggggg</Typography>
+						</Grid>
 					</React.Fragment>}/>
 					</ListItem>
 					<Divider variant="fullWidth" component="li" />
@@ -158,11 +168,13 @@ render() {
 					primary={<b>뚜비</b>}
 					secondary={
 					<React.Fragment>
-						<Typography
+						<Grid container wrap="nowrap">
+						<Typography noWrap
 						component="span"
 						variant="body2"
 						className={classes.inline}
-						color="textPrimary">뚜비 안녕!</Typography>
+						color="textPrimary">뚜비 안녕!hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh</Typography>
+						</Grid>
 					</React.Fragment>}/>
 					</ListItem>
 					<Divider variant="fullWidth" component="li" />
@@ -174,11 +186,13 @@ render() {
 					primary={<b>나나</b>}
 					secondary={
 					<React.Fragment>
-						<Typography
+						<Grid container wrap="nowrap">
+						<Typography noWrap
 						component="span"
 						variant="body2"
 						className={classes.inline}
-						color="textPrimary">나나 안녕!</Typography>
+						color="textPrimary">나나 안녕!jjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj</Typography>
+						</Grid>
 					</React.Fragment>}/>
 					</ListItem>
 					<Divider variant="fullWidth" component="li" />
@@ -190,19 +204,21 @@ render() {
 					primary={<b>뽀</b>}
 					secondary={
 					<React.Fragment>
-						<Typography
+						<Grid container wrap="nowrap">
+						<Typography noWrap
 						component="span"
 						variant="body2"
 						className={classes.inline}
-						color="textPrimary">뽀 안녕!</Typography>
+						color="textPrimary">뽀 안녕!aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</Typography>
+						</Grid>
 					</React.Fragment>}/>
-					</ListItem>
-					</List>
-		</Paper>
-		</Container>
-		</div>
-		</React.Fragment>
-		)
-	}
+			</ListItem>
+		</List>
+	</Paper>
+	</Container>
+	</div>
+	</React.Fragment>
+	)
+}
 }
 export default withStyles(styles)(Talk);

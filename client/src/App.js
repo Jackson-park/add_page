@@ -20,27 +20,21 @@ import Travelerlist from "./components/trip/Travelerlist.js";
 //여행자 상세 페이지
 import Travelerdetail from "./components/trip/Travelerdetail.js";
 //상품등록 페이지
-import ProductAdd from './components/Product_add_page/ProductAdd';
-
+import ProductAdd from './components/Product_add_page/ProductAdd.js';
 //상품 목록 페이지
-import ProductList from './components/Product_list_page/ProductList' 
-
+import ProductList from './components/Product_list_page/ProductList.js';
 //회원가입 페이지
-import Register from './components/Register/Register'
-
+import Register from './components/Register/Register.js';
 //로그인 페이지
-import Login from './components/Login/Login'
-
+import Login from './components/Login/Login.js';
 //FAQ 페이지
-import FAQ from './components/FAQ/FAQ'
-
+import FAQ from './components/FAQ/FAQ.js';
 //고객센터
-import ServiceCenter from './components/Service center/ServiceCenter'
-
-//문의작성 
-import QuestionAdd from './components/QuestionAdd/QuestionAdd'
+import ServiceCenter from './components/ServiceCenter/ServiceCenter.js';
+//문의작성
+import QuestionAdd from './components/ServiceCenter/QuestionAdd.js';
 //정산현황
-import Settlement from './components/Settlement/Settlement.js'
+import Settlement from './components/Settlement/Settlement.js';
 //이용약관
 import Terms from './components/Terms_of_Use/Terms.js';
 //개인정보처리방침
@@ -69,7 +63,7 @@ export default class App extends React.Component {
             <Route exact path='/login' component={Login}/>
             <Route exact path='/faq' component={FAQ}/>
             <Route exact path='/servicecenter' component={ServiceCenter}/>
-            <Route exact path='/quetionadd' component={QuestionAdd}/>
+            <Route exact path='/servicecenter/questionadd' component={QuestionAdd}/>
             <Route exact path='/settlement' component={Settlement}/>
             <Route exact path='/Terms' component={Terms}/>
             <Route exact path='/policy/privacy' component={Privacy_Policy}/>
