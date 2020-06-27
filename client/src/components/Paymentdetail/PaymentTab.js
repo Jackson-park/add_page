@@ -27,32 +27,31 @@ class PaymentTab extends Component {
           <Tab label="전체" {...this.a11yProps(0)} />
           <Tab label="매칭대기" {...this.a11yProps(1)} />
           <Tab label="결제전" {...this.a11yProps(2)} />
-		  <Tab label="결제완료" {...this.a11yProps(3)} />
-		  <Tab label="거래완료" {...this.a11yProps(4)} />
-		  <Tab label="환불처리중" {...this.a11yProps(5)} />
-		  <Tab label="취소완료" {...this.a11yProps(6)} />
-
+          <Tab label="결제완료" {...this.a11yProps(3)} />
+          <Tab label="거래완료" {...this.a11yProps(4)} />
+          <Tab label="환불처리중" {...this.a11yProps(5)} />
+          <Tab label="취소완료" {...this.a11yProps(6)} />
         </Tabs>
       <TabPanel value={this.state.value} index={0}>
-        Item One
+      내역이 없습니다.
       </TabPanel>
       <TabPanel value={this.state.value} index={1}>
-        Item Two
+      내역이 없습니다.
       </TabPanel>
       <TabPanel value={this.state.value} index={2}>
-        Item Thrㅁㄴㅇㅁee
+      내역이 없습니다.
       </TabPanel>
 	  <TabPanel value={this.state.value} index={3}>
-        Item Thㅁㄴㅇㄴㅁㅇㅇree
+    내역이 없습니다.
       </TabPanel>
 	  <TabPanel value={this.state.value} index={4}>
-        Item Tㅇㅇㅇhree
+    내역이 없습니다.
       </TabPanel>
 	  <TabPanel value={this.state.value} index={5}>
-        Item Tㅁㅁㅁhree
+    내역이 없습니다.
       </TabPanel>
 	  <TabPanel value={this.state.value} index={6}>
-        Item Thㅇree
+    내역이 없습니다.
       </TabPanel>
       </div>
     );
