@@ -5,12 +5,20 @@ import Button from '@material-ui/core/Button';
 import KeyboardArrowRight from '@material-ui/icons/KeyboardArrowRight';
 import KeyboardArrowLeft from '@material-ui/icons/KeyboardArrowLeft';
 import { Grid } from '@material-ui/core';
-
-
+import Jordan1 from './jordan1.png';
+import Jordan2 from './jordan2.png';
+import Jordan3 from './jordan3.png';
+import Jordan4 from './jordan4.png';
+import Jordan5 from './jordan5.png';
 
 const productImage = [
-
+  {imgPath: Jordan1},
+  {imgPath: Jordan2},
+  {imgPath: Jordan3},
+  {imgPath: Jordan4},
+  {imgPath: Jordan5},
 ];
+
 const styles = theme =>({
   div_root: {
     flex:1,
@@ -49,14 +57,13 @@ class ImageSetpper extends React.Component{
     
     return(
       <div className={classes.div_root}>
-       <Grid className={classes.Grid_root}
-       container
-       justify="center"
-       alignItems="center">
-    <img className={classes.img_image}
-    // src={productImage[this.state.activeStep].imgPath}/>
-	  src={productImage[this.state.activeStep]}/>
-      </Grid>
+        <Grid className={classes.Grid_root}
+        container
+        justify="center"
+        alignItems="center">
+          <img className={classes.img_image}
+          src={productImage[this.state.activeStep].imgPath}/>
+        </Grid>
       <div>
       <MobileStepper
         steps={this.state.maxSteps}
