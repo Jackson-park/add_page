@@ -3,7 +3,7 @@ import { withStyles } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import { Typography } from '@material-ui/core';
 import '../../index.css';
-import { AppBar, Toolbar, Link, Avatar, Grid, Button, Box } from '@material-ui/core';
+import { AppBar, Toolbar, Link, Avatar, Grid, Button } from '@material-ui/core';
 import IconButton from '@material-ui/core/IconButton';
 import MenuItem from '@material-ui/core/MenuItem';
 import Menu from '@material-ui/core/Menu';
@@ -33,8 +33,7 @@ const styles = theme =>({
     justifyContent: 'flex-end',
   },
   Link_loginmenu: {
-    margin: theme.spacing(2),
-
+    margin: theme.spacing(1),
     '&:focus, &:hover': {
       color: 'orange',
     },
@@ -47,12 +46,13 @@ class LinkAppbar extends React.Component {
       uesr_name: '박재성',
       anchorEl: null,
       open: false,
-      loginstate:false
+      loginstate: false
     }
     this.handleMenu = this.handleMenu.bind(this);
     this.handleClose = this.handleClose.bind(this);
     this.handle_Popup = this.handle_Popup.bind(this);
   }
+
   handleMenu(e) {
     this.setState({ anchorEl: e.currentTarget});
     this.setState({ open: true});
@@ -125,11 +125,9 @@ class LinkAppbar extends React.Component {
             </div>
             
             <div>
-            <Link className={classes.Link_loginmenu} href="/login" color="inherit" underline="none"><b>로그인</b></Link>
-            <Link className={classes.Link_loginmenu} href="/register" color="inherit" underline="none" ><b>회원가입</b></Link>            
-            
-            { /*로그인 되었을때 */ }
-            <IconButton
+              {this.state.loginstate ?
+              <div>
+              <IconButton
                 aria-label="userchat"
                 aria-haspopup="true"
                 onClick={this.handle_Popup}
@@ -168,6 +166,13 @@ class LinkAppbar extends React.Component {
                 value="logout"
                 onClick={this.handleFormLogout}>로그아웃</MenuItem>
               </Menu>
+              </div>
+              :
+              <div>
+              <Link className={classes.Link_loginmenu} href="/login" color="inherit" underline="none"><b>로그인</b></Link>
+              <Link className={classes.Link_loginmenu} href="/register" color="inherit" underline="none" ><b>회원가입</b></Link>
+              </div>
+              }
               </div>
               </Grid>
               </div>

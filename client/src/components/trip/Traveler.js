@@ -9,6 +9,7 @@ import FlightTakeoffIcon from '@material-ui/icons/FlightTakeoff';
 import TripImg from './trip.jpg';
 import Roundtrip from './Roundtrip.js';
 import Oneway from './Oneway.js';
+import Jackson from './박재성.jpg';
 const styles = theme =>({
 	div_root: {
     flex: 1,
@@ -149,7 +150,7 @@ class Traveler extends React.Component{
         justify="space-evenly"
         alignItems="flex-start">
         <div>
-          <img className={classes.img_user} src={null}></img>
+          <img className={classes.img_user} src={Jackson}></img>
         </div>
         <div>
           <Typography variant="body1">이름</Typography>

@@ -101,7 +101,7 @@ class QuestionAdd extends React.Component{
             <div>
               <Breadcrumbs separator={<NavigateNextIcon fontSize="small" />} aria-label="breadcrumb">
               <Link color="textPrimary" href="/servicecenter"><Typography variant="h5">문의리스트</Typography></Link>
-              <Link color="textPrimary" href="/questionadd"><Typography variant="h5">문의하기</Typography></Link>
+              <Link color="textPrimary" href="/servicecenter/questionadd"><Typography variant="h5">문의하기</Typography></Link>
               </Breadcrumbs>
             </div>
             <Divider className={classes.Divider_header}/>

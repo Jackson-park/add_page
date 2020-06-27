@@ -95,11 +95,11 @@ import more_icon from "./icon/more-icon.png"
   
     },
     ListSubheader_category: {
-      fontSize: 30
+      fontSize: 20
     },
     ListSubheader_country: {
       marginTop: 10,
-      fontSize: 30
+      fontSize: 20,
     },
     Typography_content: {
     
@@ -261,7 +261,7 @@ class ProductList extends React.Component {
                     {"상품 추가하기"}
                   </Link>
            {/* 검색창 */}
-           <div className={classes.div_search}>     
+           <div className={classes.div_search}>
             <Box  borderRadius={16} className={classes.search}>
               <div className={classes.searchIcon}>
                 <SearchIcon />
@@ -330,8 +330,10 @@ class ProductList extends React.Component {
                   component="nav"
                   aria-labelledby="nested-list-subheader"
                   subheader={
-                    <ListSubheader className={classes.ListSubheader_country} component="div"
-                                   id="nested-list-subheader">
+                    <ListSubheader
+                    className={classes.ListSubheader_country}
+                    component="div"
+                    id="nested-list-subheader">
                       나라별
                     </ListSubheader>}
                   className={classes.root}>
@@ -394,7 +396,6 @@ class ProductList extends React.Component {
                     </ListItemIcon>
                     <Typography variant="h7">기타국가</Typography>
                   </ListItem>
-                 
                   </div>
 
                 </List>
